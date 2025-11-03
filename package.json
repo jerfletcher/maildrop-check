@@ -1,22 +1,42 @@
 {
-  "name": "maildrop-checker",
+  "name": "maildrop-check",
   "version": "1.0.0",
-  "description": "Simple CLI to check maildrop.cc inboxes",
+  "description": "CLI to check Maildrop (maildrop.cc) inboxes via their GraphQL API — lightweight tool for inspecting disposable mailboxes",
   "main": "index.js",
   "bin": {
-    "maildrop-checker": "index.js"
+    "maildrop-check": "index.js"
   },
   "scripts": {
     "check": "node index.js",
-    "check:json": "node index.js --json"
+    "check:json": "node index.js --json",
+    "start": "node index.js"
   },
   "keywords": [
     "maildrop",
+    "maildrop.cc",
+    "disposable-email-address",
+    "temp-mail",
     "cli",
-    "email"
+    "command-line",
+    "email",
+    "email-checker",
+    "inbox",
+    "graphql",
+    "node",
+    "nodejs",
+    "automation",
+    "privacy"
   ],
-  "author": "",
+  "author": "Jeremy Fletcher",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerfletcher/maildrop-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerfletcher/maildrop-check/issues"
+  },
+  "homepage": "https://github.com/jerfletcher/maildrop-check#readme",
   "engines": {
     "node": ">=14"
   }

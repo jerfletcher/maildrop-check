@@ -180,15 +180,14 @@ if (argMailbox) {
     prompt: "maildrop> "
   });
 
-  console.log("Simple Maildrop checker (uses GraphQL API)");
+  console.log("maildrop-check (uses GraphQL API)");
   console.log("Usage examples:");
-  console.log("  npm run check -- test           -> checks test@maildrop.cc");
-  console.log("  npm run check -- test --json    -> prints JSON output");
-  console.log("  node index.js test              -> checks test@maildrop.cc");
-  console.log("  node index.js test --json       -> prints JSON output");
-  console.log("  test@maildrop.cc                -> checks test@maildrop.cc");
-  console.log("  check test --json               -> interactive command with JSON");
-  console.log("  quit                            -> exit");
+  console.log("  npm run check -- better-test-mail            -> checks better-test-mail@maildrop.cc");
+  console.log("  npm run check:json -- better-test-mail@maildrop.cc -> prints JSON output");
+  console.log("  node index.js better-test-mail --json        -> checks better-test-mail@maildrop.cc and prints JSON");
+  console.log("  better-test-mail@maildrop.cc                 -> checks better-test-mail@maildrop.cc");
+  console.log("  check better-test-mail --json                -> interactive command with JSON");
+  console.log("  quit                                         -> exit");
   rl.prompt();
 
   rl.on('line', async (line) => {
@@ -201,7 +200,7 @@ if (argMailbox) {
     const inbox = parseInboxFromInput(cmd);
     const jsonOutput = cmd.includes('--json') || cmd.includes('-j');
     if (!inbox) {
-      console.log("Could not determine inbox. Try 'check test' or 'test@maildrop.cc'");
+      console.log("Could not determine inbox. Try 'check better-test-mail' or 'better-test-mail@maildrop.cc'");
       rl.prompt();
       return;
     }
