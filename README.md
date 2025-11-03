@@ -1,8 +1,12 @@
 # maildrop-check
 
-Lightweight CLI to inspect Maildrop (maildrop.cc) inboxes using their GraphQL API.
+Lightweight CLI to inspect Maildrop inboxes using their GraphQL API.
 
-This tool is a small, zero-dependency Node.js command-line utility for quickly viewing messages in disposable Maildrop inboxes.
+About Maildrop
+
+Maildrop ([https://maildrop.cc](https://maildrop.cc)) is a free disposable email service that provides temporary inboxes you can view without registering. It exposes a public GraphQL API at [https://api.maildrop.cc/graphql](https://api.maildrop.cc/graphql) which this tool queries to list messages and fetch message HTML/content.
+
+This tool is a small, zero-dependency Node.js command-line utility for quickly viewing messages in disposable Maildrop inboxes. See the Maildrop site and API for more details.
 
 See [`package.json`](package.json:1) and [`index.js`](index.js:1) for implementation details.
 
